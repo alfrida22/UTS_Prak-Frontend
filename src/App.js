@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import Login from './Components/Login/Login'
@@ -8,7 +8,8 @@ import Register from './Components/Register/Register';
 import Dashboard from './Components/Dashboard/Dashboard';
 import TentangKami from './Components/Hero/Tentang';
 import FiturKami from './Components/Hero/Fitur';
-import Footer from './Components/Hero/Footer';
+import DaftarList from './Components/DaftarList';
+import SplashScreen from './Components/Splash/SplashScreen';
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
           <Route path="/Hero" element={<Hero />} />
           <Route path="/TentangKami" element={<TentangKami />} />
           <Route path="/FiturKami" element={<FiturKami />} />
+          <Route path="/DaftarList" element={<DaftarList/>} />
         </Routes>
       </div>
     </Router>
   );
 }
 
-export default App;
+export default SplashScreen (App);
